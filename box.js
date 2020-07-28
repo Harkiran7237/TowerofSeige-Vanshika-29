@@ -13,9 +13,9 @@ class Box{
       }
       display(){
         var angle = this.body.angle;
-        //push();
-        //translate(this.body.position.x, this.body.position.y);
-        //rotate(angle);
+        // push();
+        // translate(this.body.position.x, this.body.position.y);
+        // rotate(angle);
         fill("brown");
         rectMode(CENTER);
         rect( this.body.position.x, this.body.position.y, this.width, this.height);

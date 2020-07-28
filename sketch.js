@@ -14,7 +14,7 @@ function setup() {
     var options ={
       isStatic: true
     }
-    polygon = new hexagon(100,150,40,40);
+    polygon = new hexagon(150,200,40,40);
     ground1 = new Ground(400,height,800,20 );
     platform = new Ground(350,200,220,10);
     platform2 = new Ground(600,100,125,10);
@@ -44,7 +44,7 @@ function setup() {
    //level 2
    box16 = new Box(600,65,30,40);
    box17 = new Box(620,65,30,40);
-   chain = new launch(polygon.body,{x:100,y:150})
+   chain = new constraint(polygon.body,{x:100,y:200})
   }
 
 function draw() {
@@ -85,5 +85,6 @@ function mouseDragged(){
 
 
 function mouseReleased(){
-	chain.Fly();
+  chain.Fly();
+  //Matter.Body.applyForce(polygon.body, polygon.body.position,{x:200,y:200})
 }
